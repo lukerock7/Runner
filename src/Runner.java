@@ -13,10 +13,10 @@ public class Runner {
         System.out.println(loneSum(18,18,18));
         System.out.println(countHi("hihihihihihi"));
         System.out.println(sumDigits("Albinsongivesyou14outof15"));
-        int[] a = {5,4,2,1};
-        System.out.println(only14(a));
-        int[] a = {1,3,5,7,9,2};
-        System.out.println(canBalance(a));
+        int[] b = {5,4,2,1};
+        System.out.println(only14(b));
+        int[] c = {1,3,5,7,9,2};
+        System.out.println(canBalance(c));
 
     }
     //Warmup 1 - makes10
@@ -26,16 +26,11 @@ public class Runner {
     }
     //Warmup 2 - frontTimes
     public static String frontTimes(String str, int n) {
-        int frontLen = 3;
-        if (frontLen > str.length()) {
-            frontLen = str.length();
-        }
-        String front = str.substring(0, frontLen);
-
         String result = "";
-        for (int i=0; i<n; i++) {
-            result = result + front;
-        }
+        if (str.length() <= 3)
+            for (int i = 0; i < n; i++) result += str;
+        else
+            for (int i = 0; i < n; i++) result += str.substring(0, 3);
         return result;
     }
     //String-1 - firstTwo
@@ -62,7 +57,7 @@ public class Runner {
     //Logic-1 - teenSum
     public static int teenSum(int a, int b) {
         int total = a+b;
-        if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19))
+        if ((b >= 13 && b <= 19) || (a >= 13 && a <= 19))
             return 19;
         else
             return total;
