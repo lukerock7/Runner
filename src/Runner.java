@@ -63,20 +63,16 @@ public class Runner {
             return total;
     }
     //Logic-2 - loneSum
-    public static int loneSum(int a, int b, int c) {
-        int sum = 0;
+public int blackjack(int a, int b) {
+    if (a > 21) a = 0;
+    if (b > 21) b = 0;
 
-        if(a != b && a != c)
-            sum += a;
-
-        if(b != a && b != c)
-            sum += b;
-
-        if(c != a && c != b)
-            sum += c;
-
-        return sum;
+    if (a > b) {
+        return a;
+    } else {
+        return b;
     }
+}
     //String-2 - countHi
     public static int countHi(String str) {
         int count = 0;
