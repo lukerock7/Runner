@@ -10,7 +10,7 @@ public class Runner {
         int[] a = {2,3,4};
         System.out.println(fix23(a));
         System.out.println(teenSum(13,19));
-        System.out.println(loneSum(18,18,18));
+        System.out.println(loneSum(21,22));
         System.out.println(countHi("hihihihihihi"));
         System.out.println(sumDigits("Albinsongivesyou14outof15"));
         int[] b = {5,4,2,1};
